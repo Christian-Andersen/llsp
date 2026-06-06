@@ -2,6 +2,35 @@
 name = "llsp"
 version = "0.1.0"
 edition = "2024"
+description = "What if an LLM was an LSP?"
+license = "MIT"
+repository = "https://github.com/Christian-Andersen/llsp"
+readme = "README.md"
+keywords = ["language-server", "lsp"]
+categories = ["development-tools"]
 
 [dependencies]
 clap = { version = "4.6.1", features = ["derive"] }
+
+[lints.rust]
+# missing_docs = "deny"
+unsafe_code = "deny"
+warnings = "deny"
+
+[lints.clippy]
+all = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
+nursery = { level = "deny", priority = -1 }
+cargo = { level = "deny", priority = -1 }
+# todo = "deny"
+unwrap_used = "deny"
+expect_used = "deny"
+panic = "deny"
+indexing_slicing = "deny"
+string_slice = "deny"
+verbose_file_reads = "deny"
+dbg_macro = "deny"
+shadow_unrelated = "deny"
+missing_errors_doc = "deny"
+missing_panics_doc = "deny"
+wildcard_imports = "deny"
